@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
+//component decorator that adds metadata to the AppComponent class
 @Component({
-  selector: 'mw-app',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'mw-app', //will select the first match in the index.html document
+  templateUrl: './app.component.html', //the html of the component
+  styleUrls: ['./app.component.css'] // the css of the component
 })
 export class AppComponent {
   firstMediaItem = {
@@ -12,7 +13,10 @@ export class AppComponent {
     medium: 'Series',
     category: 'Science Fiction',
     year: 2010,
-    watchedOn: 1294166565384,
+    watchedOn: null,
     isFavorite: false
   };
+
+  onMediaItemDelete(mediaItem){
+  }
 }
